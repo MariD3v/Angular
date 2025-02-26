@@ -1,18 +1,4 @@
-button {
-    padding: 8px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0px 10px;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-
-  div {
+ div {
     max-width: 400px;
     margin: 20px auto;
     padding: 10px;
