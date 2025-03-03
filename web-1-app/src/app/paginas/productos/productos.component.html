@@ -1,30 +1,22 @@
 <table class="table">
     <thead>
       <tr>
+        <th scope="col">Imagen</th>
         <th scope="col">ID</th>
         <th scope="col">Nombre</th>
+        <th scope="col">Categoría</th>
         <th scope="col">Precio</th>
-        <th scope="col">Cantidad</th>
+        <th scope="col">Más</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Libro</td>
-        <td>22</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Pantalla</td>
-        <td>234</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Platos</td>
-        <td>16</td>
-        <td>12</td>
+      <tr *ngFor="let producto of listaProductos; let i=index">
+        <td><img src={{producto.image}} width="80px" height="80px"></td>
+        <th scope="row">{{i+1}}</th>
+        <td>{{ producto.title }}</td>
+        <td>{{ producto.category }}</td>
+        <td>{{ producto.price }}€</td>
+        <td><button class="btn btn-outline-primary" [routerLink]="['/productos',producto.id]">Más información</button></td>
       </tr>
     </tbody>
   </table>
