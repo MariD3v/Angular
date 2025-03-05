@@ -7,8 +7,7 @@ import { IProducto } from '../modelos/iproducto.modelos';
   providedIn: 'root'
 })
 export class ApiService {
-  private url: string="https://fakestoreapi.com/products";
-  private urlSingleProduct: string="https://fakestoreapi.com/products/";
+  private url: string="http://localhost:5000/api/productos";
 
   constructor(private _httpClient:HttpClient) { }
 
@@ -17,6 +16,6 @@ export class ApiService {
   }
 
   public getProducto(id:Number):Observable<IProducto>{
-    return this._httpClient.get<IProducto>(this.urlSingleProduct+id)
+    return this._httpClient.get<IProducto>(this.url+"/"+id)
   }
 }

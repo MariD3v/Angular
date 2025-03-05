@@ -6,23 +6,25 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductosComponent } from './paginas/productos/productos.component';
 import { InicioComponent } from './paginas/inicio/inicio.component';
-import { ContactoComponent } from './paginas/contacto/contacto.component';
+import { SobrenosotrosComponent } from './paginas/sobrenosotros/sobrenosotros.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetalleProductoComponent } from './paginas/detalle-producto/detalle-producto.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductosComponent,
     InicioComponent,
-    ContactoComponent,
+    SobrenosotrosComponent,
     DetalleProductoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
